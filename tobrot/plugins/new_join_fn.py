@@ -38,7 +38,7 @@ async def help_message_f(client, message):
     #message_id = 99
     # display the /help
     
-    await message.reply_text("""join this group for help-- @atvreqs\n\n READ THIS 👉 tg://resolve?domain=c&post=1338634999 © [____ACHIYA____]""", disable_web_page_preview=True)
+    await message.reply_text("""Join this group for help-- @atvreqs. READ THIS 👉 tg://resolve?domain=c&post=1338634999\n\n © [____ACHIYA____]""", disable_web_page_preview=True)
 
 
 async def rename_message_f(client, message):
