@@ -94,7 +94,7 @@ async def incoming_message_f(client, message):
             await i_m_sefg.edit_text(err_message)
     else:
         await i_m_sefg.edit_text(
-            "**FRICK**! wat have you entered. \nPlease read /help \n"
+            "**FRICK**! What have you done??🤯🤯 \nPlease read /help \n"
             f"<b>API Error</b>: {cf_name}"
         )
 #
@@ -149,8 +149,8 @@ async def incoming_gdrive_message_f(client, message):
         )
     else:
         await i_m_sefg.edit_text(
-            "**FRICK**! wat have you entered. \nPlease read /help \n"
-            f"<b>API Error</b>: {cf_name}"
+            "**FRICK**! What have you done??🤯🤯\n <b>Reply to your (Magnet or Direct)link</b>, if you want to get it uploaded into the Google Drive \nPlease read /help \n"
+            f"<b>API Error</b>: {cf_name}\n" "© [____ACHIYA____]"
         )
 
 
@@ -199,6 +199,6 @@ async def incoming_youtube_dl_f(client, message):
             )
     else:
         await i_m_sefg.edit_text(
-            "**FRICK**! wat have you entered. \nPlease read /help \n"
+            "**FRICK**! What have you done?? 🤯🤯\n <b>Reply to your (Magnet or Direct)link</b>, if you want to get it uploaded into the Google Drive \nPlease read /help \n"
             f"<b>API Error</b>: {cf_name}"
         )
