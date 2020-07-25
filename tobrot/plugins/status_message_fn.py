@@ -73,6 +73,9 @@ async def status_message_f(client, message):
         if msg == "":
             msg = "🤷‍♂️ No Active, Queued or Paused TORRENTs"
         await message.reply_text(msg, quote=True)
+    else:
+        msg = "This command is only for the Owners"
+        await message.reply_text(msg, quote=True)
 
 async def cancel_message_f(client, message):
     if len(message.command) > 1:
