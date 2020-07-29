@@ -22,6 +22,7 @@ from tobrot import (
     TG_BOT_TOKEN,
     APP_ID,
     API_HASH,
+    OWNER_ID,
     AUTH_CHANNEL,
     LEECH_COMMAND,
     YTDL_COMMAND,
@@ -99,7 +100,7 @@ if __name__ == "__main__" :
     #
     incoming_g_clear_handler = MessageHandler(
         g_clearme,
-        filters=Filters.command(["renewme"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command(["renewme"]) & Filters.chat(chats=OWNER_ID)
     )
     app.add_handler(incoming_g_clear_handler)
     #
