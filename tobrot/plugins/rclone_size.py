@@ -11,6 +11,9 @@ from tobrot import (
     DESTINATION_FOLDER,
     RCLONE_CONFIG
 )
+
+from tobrot.helper_funcs.admin_check import AdminCheck
+
 from pyrogram import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,
@@ -40,6 +43,7 @@ async def check_size_g(client, message):
 
 
 async def g_clearme(client, message):
+  if await AdminCheck(client, message.chat.id, message.from_user.id):
     inline_keyboard = []
     ikeyboard = []
     ikeyboard.append(InlineKeyboardButton("Yes 🚫", callback_data=("fuckingdo").encode("UTF-8")))
@@ -47,3 +51,6 @@ async def g_clearme(client, message):
     inline_keyboard.append(ikeyboard)
     reply_markup = InlineKeyboardMarkup(inline_keyboard)
     await message.reply_text("Are you sure? 🚫 This will delete all your downloads locally 🚫", reply_markup=reply_markup, quote=True)
+  else:
+        msg = "This command is only for the Owners"
+        await message.reply_text(msg, quote=True)
