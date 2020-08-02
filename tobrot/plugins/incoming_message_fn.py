@@ -13,6 +13,7 @@ LOGGER = logging.getLogger(__name__)
 
 
 import os
+import requests
 
 from tobrot import (
     DOWNLOAD_LOCATION
@@ -28,7 +29,8 @@ from tobrot.helper_funcs.download_from_link import request_download
 from tobrot.helper_funcs.display_progress import progress_for_pyrogram
 from tobrot.helper_funcs.youtube_dl_extractor import extract_youtube_dl_formats
 from tobrot.helper_funcs.admin_check import AdminCheck
-        
+from tobrot.helper_funcs.ytplaylist import yt_playlist_downg
+
 async def incoming_purge_message_f(client, message):
     """/purge command"""
     i_m_sefg2 = await message.reply_text("Purging...", quote=True)
@@ -184,12 +186,16 @@ async def incoming_youtube_dl_f(client, message):
             yt_dl_pass_word,
             user_working_dir
         )
+        print(thumb_image)
+        req = requests.get(f"{thumb_image}")
+        gau_tam = f"{current_user_id}.jpg"
+        open(gau_tam, 'wb').write(req.content)
         if thumb_image is not None:
-            await message.reply_text(
-                text_message,
-                #photo=thumb_image,
+            await message.reply_photo(
+                #text_message,
+                photo=gau_tam,
                 quote=True,
-                #caption=text_message,
+                caption=text_message,
                 reply_markup=reply_markup
             )
             await i_m_sefg.delete()
@@ -203,3 +209,17 @@ async def incoming_youtube_dl_f(client, message):
             "**FRICK**! What have you done?? 🤯🤯\n <b>Reply to your (Magnet or Direct)link</b>, if you want to get it uploaded into the Google Drive \nPlease read /help \n"
             f"<b>API Error</b>: {cf_name}"
         )
+#playlist
+async def g_yt_playlist(client, message):
+    """ /pytdl command """
+    #i_m_sefg = await message.reply_text("Processing...Wait n watch Baby 🤗", quote=True)
+    if len(message.command) > 1:
+        if message.command[1] == "gdrive":
+            with open('blame_my_knowledge_again.txt', 'w+') as gg:
+                gg.write("I am noob and don't know what to do that's why I have did this")
+    if 'www.youtube.com/playlist' in message.reply_to_message.text:
+        i_m_sefg = await message.reply_text("Processing...Wait n watch Baby 🤗", quote=True)
+        await yt_playlist_downg(message.reply_to_message, i_m_sefg)
+
+    else:
+        await i_m_sefg.edit_text("BRO! SERIOUSLY? 🙄\n <b>Reply to the link of your YOUTUBE PLAYLIST</b>, if you want to get it uploaded into Telegram")
