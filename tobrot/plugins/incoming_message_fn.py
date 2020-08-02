@@ -41,7 +41,7 @@ async def incoming_purge_message_f(client, message):
         for download in downloads:
             LOGGER.info(download.remove(force=True))
     await i_m_sefg2.delete()
-
+    
 async def incoming_message_f(client, message):
     """/leech command"""
     i_m_sefg = await message.reply_text("processing", quote=True)
@@ -220,6 +220,6 @@ async def g_yt_playlist(client, message):
     if 'www.youtube.com/playlist' in message.reply_to_message.text:
         i_m_sefg = await message.reply_text("Processing...Wait n watch Baby 🤗", quote=True)
         await yt_playlist_downg(message.reply_to_message, i_m_sefg)
-
+    
     else:
-        await i_m_sefg.edit_text("BRO! SERIOUSLY? 🙄\n <b>Reply to the link of your YOUTUBE PLAYLIST</b>, if you want to get it uploaded into Telegram")
+        await i_m_sefg.edit_text("BRO! SERIOUSLY?🙄.. Reply to the link of your YOUTUBE PLAYLIST, if you want to get it uploaded into Telegram")
