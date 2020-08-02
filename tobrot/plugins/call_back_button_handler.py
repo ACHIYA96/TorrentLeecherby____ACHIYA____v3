@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# (c) ACHIYA LK | [____ACHIYA____]
+# (c) ACHIYA LK
 
 # the logging things
 import logging
@@ -65,4 +65,5 @@ async def button(bot, update: CallbackQuery):
             else:
                 await update.message.edit_text("You are not allowed to do that 🤭")
         elif cb_data == "fuckoff":
-            await update.message.edit_text("Okay! fine 🤬")			
+            await update.message.edit_text("Okay! fine 🤬")
+				
