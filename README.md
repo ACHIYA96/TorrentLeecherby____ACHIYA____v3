@@ -161,7 +161,7 @@ and everythin except `[NAME]`
 
 * `/ytdl gdrive`: This will download and upload to your GDrive.
 
-* `/pytdl gdrive`: This download and upload to your GDrive.
+* `/pytdl gdrive`: This will download youtube playlists and upload to your GDrive.
 
 * `/leech`: This command should be used as reply to a magnetic link, a torrent link, or a direct link. [this command will SPAM the chat and send the downloads a seperate files, if there is more than one file, in the specified torrent]
 
