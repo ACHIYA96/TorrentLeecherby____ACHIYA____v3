@@ -1,4 +1,4 @@
-# (c) [____ACHIYA____]
+# [____ACHIYA____]
 # 
 # the logging things
 import logging
