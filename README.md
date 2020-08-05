@@ -148,6 +148,8 @@ and everythin except `[NAME]`
 
 * `YTDL_COMMAND`
 
+* `PYTDL_COMMAND`
+
 * `TELEGRAM_LEECH_COMMAND_G`
 
 * `UPLOAD_AS_DOC`: Takes two option True or False. If True file will be uploaded as document. This is for people who wants video files as document instead of streamable.
