@@ -38,7 +38,7 @@ async def help_message_f(client, message):
     #message_id = 99
     # display the /help
     
-    await message.reply_text("""Join this group for help-- @atvreqs\n\n PLEASE READ THIS 👉 https://t.me/c/1338634999/55 \n\n © [ _ _ _ _ ACHIYA _ _ _ _ ]""", disable_web_page_preview=True)
+    await message.reply_text("""Join this group for help-- @atvreqs\n\n PLEASE READ THIS 👉 https://t.me/c/1338634999/55 \n\n © [ _ _ _ _ ACHIYA _ _ _ _ ] \n\n <b>COMMANDS</b>\n /gleech@achi - Torrent/URL to GDrive\n /tleech@achi - Telegram Files to GDrive\n /ytdl@achi - Youtube vids to GDrive""", disable_web_page_preview=True)
 
 
 async def rename_message_f(client, message):
