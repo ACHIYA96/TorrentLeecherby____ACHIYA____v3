@@ -222,4 +222,6 @@ async def g_yt_playlist(client, message):
         await yt_playlist_downg(message.reply_to_message, i_m_sefg)
         
     else:
-        await i_m_sefg.edit_text("BRO! SERIOUSLY?🙄.. Reply to the link of your YOUTUBE PLAYLIST, if you want to get it uploaded into Telegram")
+        await i_m_sefg.edit_text(
+            "BRO! SERIOUSLY?🙄..\n Reply to the link of your YOUTUBE PLAYLIST, if you want to get it uploaded into Telegram"
+        )
