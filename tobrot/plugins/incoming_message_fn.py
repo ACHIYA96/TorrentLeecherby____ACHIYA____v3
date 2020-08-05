@@ -214,7 +214,7 @@ async def g_yt_playlist(client, message):
     """ /pytdl command """
     i_m_sefg = await message.reply_text("Processing...Wait n watch Baby 🤗", quote=True)
     if len(message.command) > 1:
-        if message.command[1] == "gdrive":
+        if message.command[1] == "tg":
             with open('blame_my_knowledge_again.txt', 'w+') as gg:
                 gg.write("I am noob and don't know what to do that's why I have did this")
     if 'youtube.com/playlist' in message.reply_to_message.text:
