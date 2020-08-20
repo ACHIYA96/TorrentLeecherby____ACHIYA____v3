@@ -40,7 +40,7 @@ from tobrot.helper_funcs.display_progress import (
 
 async def status_message_f(client, message):
   if await AdminCheck(client, message.chat.id, message.from_user.id):
-        aria_i_p = await aria_start()
+    aria_i_p = await aria_start()
     # Show All Downloads
     downloads = aria_i_p.get_downloads()
     #
