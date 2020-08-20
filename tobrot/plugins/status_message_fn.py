@@ -90,7 +90,7 @@ async def status_message_f(client, message):
     used = humanbytes(used)
     free = humanbytes(free)
 
-    ms_g = f"<b>Status<\b>📊\n <b>Bot Uptime</b>: <code>{currentTime}</code>\n \n📂💾" \
+    ms_g = f"<b>STATUS</b> 📊\n<b>Bot Uptime</b>: <code>{currentTime}</code>\n \n📂💾\n" \
         f"<b>Total disk space</b>: <code>{total}</code>\n" \
         f"<b>Used</b>: <code>{used}</code>\n" \
         f"<b>Free</b>: <code>{free}</code>\n"
