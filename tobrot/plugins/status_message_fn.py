@@ -82,7 +82,7 @@ async def status_message_f(client, message):
     LOGGER.info(msg)
 
     if msg == "":
-        msg = "🤷‍♂️ No Active, Queued or Paused TORRENTs"
+        msg = "🤷‍♂️ No Active, Queued or Paused TORRENTs \n I'm just chilling here 😎"
 
     currentTime = TimeFormatter((time.time() - BOT_START_TIME))
     total, used, free = shutil.disk_usage(".")
@@ -90,7 +90,7 @@ async def status_message_f(client, message):
     used = humanbytes(used)
     free = humanbytes(free)
 
-    ms_g = f"<b>Bot Uptime</b>: <code>{currentTime}</code>\n" \
+    ms_g = f"<b>Status<\b>📊\n <b>Bot Uptime</b>: <code>{currentTime}</code>\n \n📂💾" \
         f"<b>Total disk space</b>: <code>{total}</code>\n" \
         f"<b>Used</b>: <code>{used}</code>\n" \
         f"<b>Free</b>: <code>{free}</code>\n"
