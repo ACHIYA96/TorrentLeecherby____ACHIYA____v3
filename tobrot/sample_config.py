@@ -49,3 +49,4 @@ class Config(object):
     CLEAR_THUMBNAIL = os.environ.get("CLEAR_THUMBNAIL", "achiiclearthumbnail")
     UPLOAD_AS_DOC = os.environ.get("UPLOAD_AS_DOC", "False")
     PYTDL_COMMAND = os.environ.get("PYTDL_COMMAND", "pytdl@achi")
+    LOG_COMMAND = os.environ.get("LOG_COMMAND", "log")
