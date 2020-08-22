@@ -38,10 +38,10 @@ async def button(bot, update: CallbackQuery):
                 LOGGER.info(g_id)
                 try:
                     downloads = aria_i_p.get_download(g_id)
-		    file_name = downloads.name
+                    file_name = downloads.name
                     LOGGER.info(downloads)
                     LOGGER.info(downloads.remove(force=True))
-	            if os.path.exists(file_name):
+                    if os.path.exists(file_name):
                         if os.path.isdir(file_name):
                             shutil.rmtree(file_name)
                         else:
