@@ -442,7 +442,7 @@ async def check_progress_for_dl(aria2, gid, event, previous_message):
                 except:
                     pass
                 #
-		if is_file is None :
+                if is_file is None :
                    msgg = f"Conn: {file.connections} <b>|</b> GID: <code>{gid}</code>"
                 else :
                    msgg = f"P: {file.connections} | S: {file.num_seeders} <b>|</b> GID: <code>{gid}</code>"
