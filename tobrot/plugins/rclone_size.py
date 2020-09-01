@@ -14,10 +14,9 @@ from tobrot import (
 
 from tobrot.helper_funcs.admin_check import AdminCheck
 
-from pyrogram import (
+from pyrogram.types import (
     InlineKeyboardButton,
-    InlineKeyboardMarkup,
-    Message
+    InlineKeyboardMarkup
 )
 
 
