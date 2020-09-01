@@ -84,7 +84,7 @@ async def status_message_f(client, message):
     if msg == "":
         msg = "🤷‍♂️ No Active, Queued or Paused TORRENTs \n I'm just chilling here 😎"
 
-    currentTime = TimeFormatter((time.time() - BOT_START_TIME))
+    currentTime = time.strftime("%H:%M:%S", time.gmtime(time.time() - BOT_START_TIME))
     total, used, free = shutil.disk_usage(".")
     total = humanbytes(total)
     used = humanbytes(used)
