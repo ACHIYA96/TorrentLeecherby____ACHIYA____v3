@@ -6,6 +6,7 @@
 A Telegram Torrent (and youtube-dl) Leecher based on [Pyrogram](https://github.com/pyrogram/pyrogram)
 
 # Benefits :-
+    ✓ Google Drive link cloning using gclone.(wip)
     ✓ Telegram File mirrorring to cloud along with its unzipping, unrar and untar
     ✓ Drive/Teamdrive support/All other cloud services rclone.org supports
     ✓ Unzip
@@ -19,6 +20,7 @@ A Telegram Torrent (and youtube-dl) Leecher based on [Pyrogram](https://github.c
     ✓ Option to select either video will be uploaded as document or streamable
     ✓ Added /renewme command to clear the downloads which are not deleted automatically.
     ✓ Added support for youtube playlist
+    ✓
     
 
 ### Credit goes to SpEcHiDe for his Publicleech repo.
@@ -27,7 +29,9 @@ A Telegram Torrent (and youtube-dl) Leecher based on [Pyrogram](https://github.c
 
 ### The Easy Way (Fork this repo and tap on deploy button)
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy) #Revived
+
+Better buy a vps 😐 and follow [this](https://github.com/gautamajay52/TorrentLeech-Gdrive#process-to-run-this-bot-on-vps)
 
 ### The Legacy Way
 Simply clone the repository and run the main file:
@@ -69,8 +73,7 @@ class Config(Config):
 
 * `DESTINATION_FOLDER`: Name of your folder in ur respective drive where you want to upload the files using the bot.
 
-* `OWNER_ID`: ID of the bot owner, He/she can be able to access bot in bot only mode too.
-
+* `OWNER_ID`: ID of the bot owner, He/she can be abled to access bot in bot only mode too(private mode).
 
 ##### Set Rclone
 
@@ -148,22 +151,32 @@ and everythin except `[NAME]`
 
 * `YTDL_COMMAND`
 
-* `PYTDL_COMMAND`
+* `GLEECH_COMMAND`
 
 * `TELEGRAM_LEECH_COMMAND_G`
+
+* `PYTDL_COMMAND_G`
+
+* `CLONE_COMMAND_G`
 
 * `UPLOAD_AS_DOC`: Takes two option True or False. If True file will be uploaded as document. This is for people who wants video files as document instead of streamable.
 
 * `INDEX_LINK`: (Without `/` at last of the link, otherwise u will get error) During creating index, plz fill `Default Root ID` with the id of your `DESTINATION_FOLDER` after creating. Otherwise index will not work properly.
 ## Available Commands
 
+* `/gclone`: This command is used to clone gdrive files or folder using gclone.
+       
+       Syntax:- `[ID of the file or folder][one space][name of your folder only(If the id is of file, don't put anything)]` and then reply /gclone to it.
+       
+* `/log`: This will send you a txt file of the logs.
+
 * `/ytdl`: This command should be used as reply to a [supported link](https://ytdl-org.github.io/youtube-dl/supportedsites.html)
 
 * `/pytdl`: This command will download videos from youtube playlist link and will upload to telegram.
 
-* `/ytdl gdrive`: This will download and upload to your GDrive.
+* `/ytdl gdrive`: This will download and upload to your cloud.
 
-* `/pytdl gdrive`: This will download youtube playlists and upload to your GDrive.
+* `/pytdl gdrive`: This download youtube playlist and upload to your cloud.
 
 * `/leech`: This command should be used as reply to a magnetic link, a torrent link, or a direct link. [this command will SPAM the chat and send the downloads a seperate files, if there is more than one file, in the specified torrent]
 
@@ -198,10 +211,10 @@ and everythin except `[NAME]`
 * `/renewme`: This will clear the remains of downloads which are not getting deleted after upload of the file or after /cancel command. 
 
 
-* [Only work with direct link for now]It is like u can add custom name as prefix of the original file name.
+* [Only work with direct link and youtube link for now]It is like u can add custom name as prefix of the original file name.
 Like if your file name is `gk.txt` uploaded will be what u add in `CUSTOM_FILE_NAME` + `gk.txt`
 
-Only works with direct link.No magnet or torrent.
+Only works with direct link/youtube link.No magnet or torrent.
 
 And also added custom name like...
 
@@ -214,14 +227,16 @@ the file will be uploaded as `new.txt`.
 
 - Clone this repo:
 ```
-git clone https://github.com/gautamajay52/TorrentLeech-Gdrive 
-cd TorrentLeech-Gdrive
+git clone https://github.com/gautamajay52/TorrentLeech-Gdrive torrentleech-gdrive
+cd torrentleech-gdrive
 ```
 
 - Install requirements
 For Debian based distros
 ```
 sudo apt install python3
+
+sudo snap install docker
 ```
 Install Docker by following the [official docker docs](https://docs.docker.com/engine/install/debian/)
 
@@ -239,11 +254,11 @@ sudo dockerd
 ```
 - Build Docker image:
 ```
-sudo docker build . -t TorrentLeech-Gdrive
+sudo docker build . -t torrentleech-gdrive
 ```
 - Run the image:
 ```
-sudo docker run TorrentLeech-Gdrive
+sudo docker run torrentleech-gdrive
 ```
 
 
@@ -253,7 +268,7 @@ sudo docker run TorrentLeech-Gdrive
 
 
 ## Credits, and Thanks to
-* [GautamKumar](https://github.com/gautamajay52/TorrentLeech-Gdrive) 😬
+* [GautamKumar(me)](https://github.com/gautamajay52/TorrentLeech-Gdrive) 😬
 * [SpEcHiDe](https://github.com/SpEcHiDe/PublicLeech) for his wonderful code😚
 * [Rclone Team](https://rclone.org) for theirs awesome tool☁️
 * [Dan Tès](https://telegram.dog/haskell) for his [Pyrogram Library](https://github.com/pyrogram/pyrogram)

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# (c) ACHIYA LK | [____ACHIYA____]
+# (c) Shrimadhav U K | gautamajay52 | Akshay C
 
 # the logging things
 import logging
@@ -42,7 +42,7 @@ async def incoming_purge_message_f(client, message):
         for download in downloads:
             LOGGER.info(download.remove(force=True))
     await i_m_sefg2.delete()
-    
+
 async def incoming_message_f(client, message):
     """/leech command"""
     i_m_sefg = await message.reply_text("processing", quote=True)
@@ -97,7 +97,7 @@ async def incoming_message_f(client, message):
             await i_m_sefg.edit_text(err_message)
     else:
         await i_m_sefg.edit_text(
-            "**FRICK**! What have you done??🤯🤯 \nPlease read /help \n"
+            "FRICK**! What have you done??🤯🤯 \nPlease read /help \n"
             f"<b>API Error</b>: {cf_name}"
         )
 #
@@ -166,7 +166,7 @@ async def incoming_youtube_dl_f(client, message):
         message.reply_to_message, "YTDL"
     )
     LOGGER.info(dl_url)
-     #if len(message.command) > 1:
+    #if len(message.command) > 1:
         #if message.command[1] == "gdrive":
             #with open('blame_my_knowledge.txt', 'w+') as gg:
                 #gg.write("I am noob and don't know what to do that's why I have did this")
@@ -222,11 +222,11 @@ async def g_yt_playlist(client, message):
     if 'youtube.com/playlist' in message.reply_to_message.text:
         i_m_sefg = await message.reply_text("Downloading...Wait n watch Baby 🤗", quote=True)
         await yt_playlist_downg(message.reply_to_message, i_m_sefg, G_DRIVE)
-        
+    
     else:
-        await message.reply_text("BRO! SERIOUSLY?🙄..\n Reply to the link of your YOUTUBE PLAYLIST, if you want to get it uploaded into Telegram")
-
-#
+        await message.reply_text("BRO! SERIOUSLY?🙄..\n Reply to the link of your YOUTUBE PLAYLIST, if you want to get it uploaded into Telegram")")
+        
+ #
 async def g_clonee(client, message):
     """ /gclone command """
     g_id = message.from_user.id
@@ -240,4 +240,4 @@ async def g_clonee(client, message):
         await gclone.gcl()
         await gclone.link_gen_size()
     else:
-        await message.reply_text("You should reply to a message, which format should be [ID of Gdrive file/folder Name of the file/folder]\nOr read ask from an admin for detailled information")
+        await message.reply_text("You should reply to a message, which format should be [ID of Gdrive file/folder Name of the file/folder]\nOr read Github for detailled information")

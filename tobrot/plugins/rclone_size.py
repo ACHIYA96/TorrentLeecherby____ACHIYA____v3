@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# (c) ACHIYA LK | [____ACHIYA____]
+# (c) gautamajay52
 
 import subprocess
 import os
@@ -11,9 +11,7 @@ from tobrot import (
     DESTINATION_FOLDER,
     RCLONE_CONFIG
 )
-
 from tobrot.helper_funcs.admin_check import AdminCheck
-
 from pyrogram.types import (
     InlineKeyboardButton,
     InlineKeyboardMarkup
@@ -29,7 +27,7 @@ async def check_size_g(client, message):
             fole.write("[DRIVE]\n")
             fole.write(f"{RCLONE_CONFIG}")
     destination = f'{DESTINATION_FOLDER}'
-    gau_tam = subprocess.Popen(['rclone', 'size', '--config=rclone.conf', 'DRIVE:'f'{destination}'], stdout = subprocess.PIPE, stderr = subprocess.PIPE)
+    gau_tam = subprocess.Popen(['rclone', 'size', '--config=./rclone.conf', 'DRIVE:'f'{destination}'], stdout = subprocess.PIPE, stderr = subprocess.PIPE)
     gau, tam = gau_tam.communicate()
     print(gau)
     print(tam)
@@ -39,7 +37,6 @@ async def check_size_g(client, message):
     await asyncio.sleep(5)
     await message.reply_text(f"🔊CloudInfo:\n\n{gautam}")
     await del_it.delete()
-
 
 
 async def g_clearme(client, message):

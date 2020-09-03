@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# (c) ACHIYA LK | [____ACHIYA____]
+# (c) Shrimadhav U K | gautamajay52
 
 import os
 import time
@@ -52,7 +52,7 @@ SAVE_THUMBNAIL = Config.SAVE_THUMBNAIL
 CLEAR_THUMBNAIL = Config.CLEAR_THUMBNAIL
 UPLOAD_AS_DOC = Config.UPLOAD_AS_DOC
 BOT_START_TIME = time.time()
-PYTDL_COMMAND = Config.PYTDL_COMMAND
+PYTDL_COMMAND_G = Config.PYTDL_COMMAND_G
 LOG_COMMAND = Config.LOG_COMMAND
 CLONE_COMMAND_G = Config.CLONE_COMMAND_G
 

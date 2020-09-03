@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# (c) ACHIYA LK | [____ACHIYA____]
+# (c) Shrimadhav U K
 
 # the logging things
 import logging
@@ -33,7 +33,7 @@ async def new_join_f(client, message):
 
 
 async def help_message_f(client, message):
-    # await message.reply_text("No one is gonna help you! 🤣🤣🤣🤣", quote=True)
+    # await message.reply_text("No one is gonna help you!🤣🤣🤣🤣", quote=True)
     #channel_id = str(AUTH_CHANNEL)[4:]
     #message_id = 99
     # display the /help
@@ -45,12 +45,13 @@ async def rename_message_f(client, message):
     inline_keyboard = []
     inline_keyboard.append([
         pyrogram.InlineKeyboardButton(
-            text="[____ACHIYA____]"
+            text="____ACHIYA____",
+            url="____ACHIYA____"
         )
     ])
     reply_markup = pyrogram.InlineKeyboardMarkup(inline_keyboard)
     await message.reply_text(
-        "please use @renamebot",
+        "please use @bot",
         quote=True,
         reply_markup=reply_markup
     )

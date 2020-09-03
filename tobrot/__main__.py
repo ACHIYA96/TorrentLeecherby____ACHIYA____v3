@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# (c) ACHIYA LK | [____ACHIYA____]
+# (c) Shrimadhav U K | gautamajay52
 
 # the logging things
 import logging
@@ -32,7 +32,7 @@ from tobrot import (
     STATUS_COMMAND,
     SAVE_THUMBNAIL,
     CLEAR_THUMBNAIL,
-    PYTDL_COMMAND,
+    PYTDL_COMMAND_G,
     LOG_COMMAND,
     CLONE_COMMAND_G
 )
@@ -121,7 +121,7 @@ if __name__ == "__main__" :
     #
     incoming_youtube_playlist_dl_handler = MessageHandler(
         g_yt_playlist,
-        filters=filters.command([f"{PYTDL_COMMAND}"]) & filters.chat(chats=AUTH_CHANNEL)
+        filters=filters.command([f"{PYTDL_COMMAND_G}"]) & filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(incoming_youtube_playlist_dl_handler)
     #
