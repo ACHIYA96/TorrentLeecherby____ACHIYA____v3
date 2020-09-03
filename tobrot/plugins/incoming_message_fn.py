@@ -222,7 +222,7 @@ async def g_yt_playlist(client, message):
     if 'youtube.com/playlist' in message.reply_to_message.text:
         i_m_sefg = await message.reply_text("Downloading...Wait n watch Baby 🤗", quote=True)
         await yt_playlist_downg(message.reply_to_message, i_m_sefg, G_DRIVE)
-    
+        
     else:
         await message.reply_text("BRO! SERIOUSLY?🙄..\n Reply to the link of your YOUTUBE PLAYLIST, if you want to get it uploaded into Telegram")
         
@@ -240,4 +240,4 @@ async def g_clonee(client, message):
         await gclone.gcl()
         await gclone.link_gen_size()
     else:
-        await message.reply_text("You should reply to a message, which format should be [ID of Gdrive file/folder Name of the file/folder]\nOr read Github for detailled information")
+        await message.reply_text("You should reply to a message, which format should be [ID of Gdrive file/folder Name of the file/folder]\nOr ask an admin for detailled information")
