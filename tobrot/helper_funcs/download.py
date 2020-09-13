@@ -32,7 +32,7 @@ from tobrot.helper_funcs.create_compressed_archive import unzip_me, unrar_me, un
 async def down_load_media_f(client, message):
     user_id = message.from_user.id
     print(user_id)
-    mess_age = await message.reply_text("...", quote=True)
+    mess_age = await message.reply_text("Is it really a Telegram Media 🤔!/n Just to make sure 🤷‍♂️", quote=True)
     if not os.path.isdir(DOWNLOAD_LOCATION):
         os.makedirs(DOWNLOAD_LOCATION)
     if message.reply_to_message is not None:
