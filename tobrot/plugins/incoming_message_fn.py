@@ -213,7 +213,7 @@ async def incoming_youtube_dl_f(client, message):
             )
     else:
         await i_m_sefg.edit_text(
-            "**FRICK**! What have you done?? 🤯🤯\n <b>Reply to your (Magnet or Direct)link</b>, if you want to get it uploaded into the Google Drive \nPlease read /help \n"
+            "**FRICK**! What have you done?? 🤯🤯\n <b>REPLY to your (YOUTUBE or other STREAMING) link</b>, if you want to get it uploaded! \n Man, Read the INSTRUCIONS!!! /help \n"
             f"<b>API Error</b>: {cf_name}"
         )
 #playlist
